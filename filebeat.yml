@@ -10,6 +10,7 @@ output.elasticsearch:
   hosts: ["https://url:9243"]
   username: "elastic"
   password: "psw"
+  index: "suricata-%{+yyyy.MM.dd}"
 setup.template.name: "suricata"
 setup.template.pattern: "suricata-*"
 setup.ilm.enabled: false
