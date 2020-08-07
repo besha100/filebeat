@@ -1,13 +1,12 @@
 
-filebeat.prospectors:  
+filebeat.inputs:
 - input_type: log
   paths:
     - /var/log/suricata/eve.json
   json.keys_under_root: true
   json.overwrite_keys: false
   json.add_error_key: true
-filebeat.registry_file: /var/lib/filebeat/registry  
-output.logstash:  
+output.elasticsearch: 
   hosts: ["https://url:9243"]
   username: "elastic"
   password: "psw"
